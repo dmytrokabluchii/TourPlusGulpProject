@@ -7,7 +7,7 @@
 
 link to example: https://dmytrokabluchii.github.io/TourPlusGulpProject/
 
-link to example in real hosting: http://beetroot.zzz.com.ua/TourPlus_website/
+link to example in real hosting: http://beetroot.zzz.com.ua/TourPlus_website_hosting/
 
 Multi page landing, responsive design.
 
