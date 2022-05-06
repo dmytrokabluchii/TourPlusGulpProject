@@ -1,0 +1,42 @@
+@import "style";
+
+.reviews__page {
+    background-color: #e5e2e2;
+    padding: 30px 0 50px;
+    font-family: 'Lato';
+    .reviews__text {
+        color: #1D1B1B;
+    }
+    .reviews__title_clients {
+        letter-spacing: 0.10em;
+    }
+    .reviews__subtitle {
+        padding: 30px 0 20px;
+        text-align: center;
+    }
+    .reviews__column {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        list-style: none;
+        padding-bottom: 50px;
+        @media screen and (max-width:999px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and (max-width:768px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    
+    .clients__cards {
+        margin-top: 0px;
+    }
+    .reviews__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            text-decoration: none;
+        }
+    }
+}

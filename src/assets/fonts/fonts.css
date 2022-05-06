@@ -1,0 +1,48 @@
+@font-face {
+    font-family: "DMSerifDisplay";
+    src: url(DMSerifDisplay-Regular.woff2) format('woff2');
+    font-style: normal; 
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url(Lato-Regular.woff2) format('woff2');
+    font-style: normal; 
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url(Lato-Medium.woff2) format('woff2');
+    font-style: normal; 
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url(Lato-SemiBold.woff2) format('woff2');
+    font-style: normal; 
+    font-weight: 600;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "Lato";
+    src: url(Lato-Bold.woff2) format('woff2');
+    font-style: normal; 
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url(Lato-ExtraBold.woff2) format('woff2');
+    font-style: normal; 
+    font-weight: 800;
+    font-display: swap;
+}

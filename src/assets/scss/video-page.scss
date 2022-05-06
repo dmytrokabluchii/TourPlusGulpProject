@@ -1,0 +1,67 @@
+@import "style";
+
+.video__page {
+    padding: 30px 0 50px;
+    background-color: #fff;
+    .page__title {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    &_content {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding-bottom: 50px;
+        li {
+            position: relative;
+            a {
+                cursor: pointer;
+                &:before {
+                    content: "";
+                    display: inline-block;
+                    width: 52px;
+                    height: 52px;
+                    margin: -26px 0 0 -26px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    background: url(../images/svg/youtube.svg) 0 0 no-repeat;
+                    z-index: 50;
+                    opacity: 0.75;
+                }
+                &:hover:before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &_button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .video__page  {
+        &_content {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            padding-bottom: 40px;
+        }
+    }
+}
+
+@media screen and (max-width:460px) {
+    .video__page  {
+        .page__title {
+            @include fz(38);
+        }
+        &_content {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+        }
+    }
+}

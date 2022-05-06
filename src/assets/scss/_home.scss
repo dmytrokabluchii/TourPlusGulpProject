@@ -1,0 +1,96 @@
+.home {
+    &__bg {
+        padding: 250px 0 0;
+        background-position: 50% top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        position: relative;
+
+        .home__arrow_down {
+            cursor: pointer;
+            position: absolute;
+            bottom: 10vh;
+            left: 50%;
+            margin: 30px;
+            span {
+                display: block;
+                width: 30px;
+                height: 30px;
+                border-bottom: 4px solid #FF492F;
+                border-right: 4px solid #FF492F;
+                transform: rotate(45deg);
+                margin: -15px;
+                animation: home__arrow_down 2s infinite;
+                &:nth-child(2){
+                    animation-delay: -0.2s;
+                }
+                &:nth-child(3){
+                    animation-delay: -0.4s;
+                }
+            }
+            @keyframes home__arrow_down {
+                0%{
+                    opacity: 0;
+                    transform: rotate(45deg) translate(-20px,-20px);
+                }
+                50%{
+                    opacity: 1;
+                }
+                100%{
+                    opacity: 0;
+                    transform: rotate(45deg) translate(20px,20px);
+                }
+            }
+        }
+    }
+    &__wrapper {
+        max-width: 44%;
+    }
+    &__title h2 {
+        font-family: 'DMSerifDisplay';
+        font-weight: 400;
+        @include fz(64);
+        padding-bottom: 17px;
+    }
+    &__subtitle p {
+        padding-bottom: 60px;
+    }
+    &__button {
+        padding-bottom: 130px;
+        width: 150px;
+        height: 50px;
+        &_video {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            cursor: pointer;
+            font-family: 'Lato';
+            font-weight: 500;
+            line-height: calc(20/16 * 100%);
+            @include fz(16);
+            color: #1D1B1B;
+
+            &::before {
+                content: '';
+                padding-right: 45px;
+                background-image: url("../images/svg/video-orig.svg");
+                background-size: 40px 40px;
+                background-repeat: no-repeat;
+                height: 40px;
+                width: 40px;
+                opacity: 0.75;
+                transition: all .4s ease-in-out;
+            }
+            &:hover:before {
+                opacity: 1;
+            }&:hover {
+                transform: scale(1.01);
+            }
+            &:hover {
+                transform: scale(1.01);
+            }
+        }
+    }
+}

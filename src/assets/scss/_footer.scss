@@ -1,0 +1,140 @@
+.footer {
+    background-color: #1D1B1B;
+    color: #F2F2F2;
+
+    ul {
+        list-style: none;
+    }
+
+    li a {
+        text-decoration: none;
+        color: #F2F2F2;
+    }
+
+    &__wrapper {
+        padding: 40px 0 0;
+    }
+
+    &__arrow {
+        margin-top: -85px;
+        display: flex;
+        justify-content: flex-end;
+
+        .arrow__content_icon {
+            padding: 60px 71px;
+            background-color: #FF492F;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            cursor: pointer;
+            @include fz(50);
+            transition: all .4s ease-in-out;
+            &:hover {
+                background-color: #b33320;
+                color: rgb(79, 228, 228);
+            }
+        }
+    }
+
+    &__column {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 135px;
+    }
+
+    &__main {
+        flex: 0 1 50%;
+    }
+
+    &__row {
+        flex: 0 1 50%;
+        display: flex;
+        justify-content: space-between;
+        gap: 135px;
+    }
+
+    &__contacts_link img {
+        width: 24px;
+        margin-right: 15px;
+    }
+
+    .list__service li a, &__contacts-data a {
+        transition: all .2s ease-in-out;
+        &:hover {
+            color:rgb(79, 228, 228);
+        }
+    }
+    
+    &__service_title,
+    &__contacts_title {
+        padding-bottom: 45px;
+    }
+
+    &__text {
+        padding-bottom: 45px;
+    }
+
+    &__service_title,
+    &__contacts_title {
+        font-family: 'Lato';
+        font-weight: 500;
+        color: #fff;
+        @include fz(24);
+        line-height: calc(35/24 * 100%);
+    }
+
+    .list__service li:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    &__contacts-column li:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    &__logo {
+        max-width: 180px;
+        a {
+            display: flex;
+            gap: 15px;
+            padding-bottom: 35px;
+        }
+
+        &_icon {
+            width: 36px;
+            height: 44px;
+            // margin-right: 15px;
+        }
+
+        &_name {
+            margin-top: 10px;
+            width: 126px;
+            height: 30px;
+        }
+    }
+
+    .media__items {
+        list-style: none;
+        padding-bottom: 55px;
+        border-bottom: 1px solid #4A4949;
+
+        li {
+            cursor: pointer;
+            display: inline-block;
+
+            +li {
+                padding-left: 15px;
+            }
+
+            a {
+                svg {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+}

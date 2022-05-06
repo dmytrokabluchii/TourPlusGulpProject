@@ -1,0 +1,97 @@
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, .0);
+    z-index: 200;
+    transition: all .2s ease;
+
+    &__block {
+        height: 100%;
+    }
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        align-items: center;
+    }
+    &__logo {
+        a {
+            display: flex;
+            gap: 15px;
+        }
+        &_name {
+            display: block;
+            padding-top: 10px;
+        }
+    }
+    &__content {
+        height: 100%;
+    }
+
+    .nav__menu ul {
+        list-style: none;
+        display: flex;
+        // Конструкция отступов в меню(кроме последнего пункта)
+        li:not(:last-child) {
+            margin-right: 20px;
+        }
+        li {
+            a {
+                text-decoration: none;
+                color: #1D1B1B;
+                font-weight: 600;
+                position: relative;
+                padding: 7px;
+                // имитация бордера(от дергания при наведении)
+                border: 2px solid transparent;
+                transition: all .4s ease-in-out;
+                &:hover {
+                    border: 2px solid #FF492F;
+                    border-radius: 25px;
+                }
+            }
+            a.active {
+                border: 2px solid #1D1B1B;
+                border-radius: 25px;
+              }
+        }
+    }
+
+    &__button_orange {
+        width: 110px;
+        min-height: 40px;
+    }
+}
+
+.header.fixed_header {
+    height: 60px;
+    background: linear-gradient(243.43deg, rgb(255, 73, 47, .8) 16%, rgba(68, 65, 65, 0.8) 90%);
+    backdrop-filter: blur(5px);
+    // z-index: 199;
+    .nav__menu ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        li a {
+            color: #fff;
+            &:after {
+                background-color: #8d2110;
+            }
+        }
+    }
+    .header__button_orange {
+        background: linear-gradient(135deg, rgb(76, 76, 76), rgb(0, 0, 0));
+        background-color: transparent;
+        box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.23);
+        color: #fff;
+        opacity: 0.8;
+        &:hover {
+            background: #fff;
+            transform: translateY(0px);
+            color: #000;
+        }
+    }
+}

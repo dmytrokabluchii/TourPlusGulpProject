@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://dmytrokabluchii.github.io/exam1/Graduate-work/sitemap.xml

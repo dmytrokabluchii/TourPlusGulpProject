@@ -1,0 +1,74 @@
+.about {
+    padding: 70px 0 0;
+
+    &__column {
+        display: flex;
+        justify-content: space-between;
+        gap: 137px;
+    }
+
+    &__left {
+        font-family: 'Lato';
+        flex: 0 1 50%;
+    }
+
+    &__left_question {
+        color: #FF492F;
+        position: relative;
+        padding: 0 0 40px 100px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 76px;
+            height: 1px;
+            border-bottom: 1px solid #FF492F;
+        }
+    }
+
+    &__title {
+        max-width: 60%;
+        padding-bottom: 20px;
+
+        h3 {
+            font-weight: 600;
+            @include fz(48);
+        }
+    }
+
+    &__subtitle {
+        color: #4A4949;
+        padding-bottom: 40px;
+    }
+
+    &__right {
+        flex: 0 1 50%;
+    }
+
+    &__gallery {
+        display: grid;
+        gap: 30px;
+        grid-template-areas:
+            "image-first image-second"
+            "image-third image-second"
+            "image-third image-fourth";
+
+        .image-first {
+            grid-area: image-first;
+        }
+
+        .image-second {
+            grid-area: image-second;
+        }
+
+        .image-third {
+            grid-area: image-third;
+        }
+
+        .image-fourth {
+            grid-area: image-fourth;
+        }
+    }
+}

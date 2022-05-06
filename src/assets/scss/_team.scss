@@ -1,0 +1,79 @@
+.team {
+    font-family: 'Lato';
+    padding-bottom: 130px;
+    &__title h3 {
+        text-align: center;
+        padding-bottom: 25px;
+    }
+
+    &__list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        li {
+            list-style: none;
+            width: 100%;
+            height: 100%;
+            a {
+                text-decoration: none;
+                display: block;
+                position: relative;
+                line-height: 0;
+                &:after {
+                    content: "";
+                    opacity: 0;
+                    transition: all 0.3s ease-in-out;
+                }
+                &:hover:after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    // background: transparent #000;
+                    background: rgba(16, 100, 174, 0.9);
+                    opacity: 0.6;
+                    z-index: 10;
+                }
+                &:hover .team__text {
+                    transition: all 0.3s ease-in-out;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__text {
+        text-align: center;
+        opacity: 0;
+        position: absolute;
+        color: rgb(255, 255, 255);
+        top: 20%;
+        transition: all 0.3s ease-out;
+        z-index: 20;
+        padding: 10px 20px;
+    }
+    &__name {
+        font-family: 'Lato';
+        @include fz(32);
+        font-weight: 700;
+        line-height: calc(46/32 * 100%);
+        padding-bottom: 20px;
+    }
+    &__occupation {
+        padding-bottom: 20px;
+    }
+    &__subtitle p {
+        @include fz(14);
+        font-weight: 400;
+        line-height: calc(20/14 * 100%);
+        // Прием Многоточие к лишнему тексту...
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        // display: -webkit-box;
+        // -webkit-line-clamp: 4;
+        // -webkit-box-orient: vertical;
+    }
+}

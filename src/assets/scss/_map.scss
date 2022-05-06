@@ -1,0 +1,46 @@
+.map {
+    &__wrapper {
+        height: 465px;
+        z-index: 10;
+        position: relative;
+        &__link {
+            &_pic {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: cover;
+            }
+        }
+        p {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+            font-size: 40px;
+            opacity: 0;
+            transition: all .2s ease;
+        }
+        a:hover p {
+            opacity: .5;
+        }
+
+    }
+
+    .map_popup {
+        display: flex;
+        justify-content: space-between;
+    }
+    .map_popup img {
+        width: 100px;
+        margin-right: 10px;
+    }
+    .leaflet-popup-content-wrapper {
+        border-radius: 10px;
+    }
+}
