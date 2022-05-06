@@ -1,6 +1,6 @@
-link to example: https://dmytrokabluchii.github.io/my_projects/TourPlus_website/index.html
+link to example: https://dmytrokabluchii.github.io/TourPlusGulpProject/
 
-link to example in real hosting: http://beetroot.zzz.com.ua/TourPlus_website/
+link to example in real hosting: http://beetroot.zzz.com.ua/TourPlus_hosting/
 
 Multi page website, responsive design.
 
