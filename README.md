@@ -1,11 +1,18 @@
+<p align="center">
+  <a href="https://gulpjs.com">
+    <img height="257" width="114" src="https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png">
+  </a>
+  <h1 align="center">Gulp config</h1>
+</p>
+
 link to example: https://dmytrokabluchii.github.io/TourPlusGulpProject/
 
-link to example in real hosting: http://beetroot.zzz.com.ua/TourPlus_hosting/
+link to example in real hosting: http://beetroot.zzz.com.ua/TourPlus_website/
 
-Multi page website, responsive design.
+Multi page landing, responsive design.
 
 Selected content for the project.
 
-Technologies used: HTML, SCSS , Java Script, AJAX, JSON, Telegram bot, jQuery.
+Technologies used: HTML, SCSS , Java Script, AJAX, JSON, Telegram bot, jQuery, Gulp.
 
-My graduate work made while studying at Beetroot Academy (01-02.2022).
+
