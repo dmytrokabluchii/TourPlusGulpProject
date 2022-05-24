@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://gulpjs.com">
-    <img height="257" width="114" src="https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png">
+    <img height="170" width="75" src="https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png">
   </a>
   <h1 align="center">Gulp config</h1>
 </p>
