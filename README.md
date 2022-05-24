@@ -1,8 +1,8 @@
 <p align="center">
   <a href="https://gulpjs.com">
-    <img height="150" width="67" src="https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png">
+    <img height="130" width="58" src="https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png">
   </a>
-  <h2 align="center">Gulp config</h2>
+  <h3 align="center">Gulp config</h3>
 </p>
 
 link to example: https://dmytrokabluchii.github.io/TourPlusGulpProject/
