@@ -102,11 +102,13 @@ body {
 
     button {
         background: linear-gradient(135deg, rgb(76, 76, 76), rgb(0, 0, 0));
+        padding: 10px 30px;
         border: 2px solid #fff;
         color: #fff;
+        transition: all 0.4s ease-in-out;
         &:hover {
             background: #fff;
-            border: 2px solid #FF492F;
+            border: 2px solid #010101;
             transform: translateY(0px);
             color: #000;
         }

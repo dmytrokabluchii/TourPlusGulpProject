@@ -219,12 +219,14 @@ body {
 }
 .modal__button button, .callback__button button {
   background: linear-gradient(135deg, #4c4c4c, black);
+  padding: 10px 30px;
   border: 2px solid #fff;
   color: #fff;
+  transition: all 0.4s ease-in-out;
 }
 .modal__button button:hover, .callback__button button:hover {
   background: #fff;
-  border: 2px solid #FF492F;
+  border: 2px solid #010101;
   transform: translateY(0px);
   color: #000;
 }
@@ -1111,6 +1113,7 @@ input {
   grid-area: image-sixth;
 }
 .gallery__link {
+  cursor: pointer;
   display: inline-block;
   position: relative;
   line-height: 0;
@@ -1118,11 +1121,6 @@ input {
 .gallery__link:after {
   content: "";
   opacity: 0;
-  transition: opacity 0.4s ease-in-out;
-}
-.gallery__link:hover:after {
-  content: "";
-  display: block;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1130,16 +1128,15 @@ input {
   left: 0;
   background: transparent;
   background-image: linear-gradient(45deg, #1d1b1b, #ff492f);
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
+.gallery__link:hover:after {
   opacity: 0.8;
 }
 .gallery__link:before {
   content: "";
   opacity: 0;
-  transition: opacity 0.4s ease-in-out;
-}
-.gallery__link:hover:before {
-  content: "";
-  display: inline-block;
   width: 52px;
   height: 52px;
   margin: -26px 0 0 -26px;
@@ -1147,7 +1144,10 @@ input {
   top: 50%;
   left: 50%;
   background: url(../images/svg/plus.svg) 0 0 no-repeat;
-  z-index: 50;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+}
+.gallery__link:hover:before {
   opacity: 1;
 }
 .gallery__button {
@@ -1344,33 +1344,31 @@ input {
 .team__list li a:after {
   content: "";
   opacity: 0;
-  transition: all 0.3s ease-in-out;
-}
-.team__list li a:hover:after {
-  content: "";
-  display: block;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   background: rgba(16, 100, 174, 0.9);
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+}
+.team__list li a:hover:after {
   opacity: 0.6;
   z-index: 10;
 }
 .team__list li a:hover .team__text {
-  transition: all 0.3s ease-in-out;
   opacity: 1;
 }
 .team__text {
-  text-align: center;
   opacity: 0;
+  text-align: center;
   position: absolute;
   color: white;
   top: 20%;
-  transition: all 0.3s ease-out;
   z-index: 20;
   padding: 10px 20px;
+  transition: all 0.5s ease-in-out;
 }
 .team__name {
   font-family: "Lato";
@@ -1636,7 +1634,7 @@ input {
   .home__bg {
     padding: 190px 0 70px;
     background-position: 70% top;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
     background-blend-mode: multiply;
   }
   .home__wrapper {

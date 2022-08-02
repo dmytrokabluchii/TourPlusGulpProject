@@ -22,23 +22,20 @@
                 &:after {
                     content: "";
                     opacity: 0;
-                    transition: all 0.3s ease-in-out;
-                }
-                &:hover:after {
-                    content: "";
-                    display: block;
                     width: 100%;
                     height: 100%;
                     position: absolute;
                     top: 0;
                     left: 0;
-                    // background: transparent #000;
                     background: rgba(16, 100, 174, 0.9);
+                    z-index: 1;
+                    transition: all 0.5s ease-in-out;
+                }
+                &:hover:after {
                     opacity: 0.6;
                     z-index: 10;
                 }
                 &:hover .team__text {
-                    transition: all 0.3s ease-in-out;
                     opacity: 1;
                 }
             }
@@ -46,14 +43,14 @@
     }
 
     &__text {
-        text-align: center;
         opacity: 0;
+        text-align: center;
         position: absolute;
         color: rgb(255, 255, 255);
         top: 20%;
-        transition: all 0.3s ease-out;
         z-index: 20;
         padding: 10px 20px;
+        transition: all 0.5s ease-in-out;
     }
     &__name {
         font-family: 'Lato';

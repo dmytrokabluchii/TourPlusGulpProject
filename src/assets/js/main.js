@@ -91,13 +91,7 @@ $(function () {
         e.preventDefault();
         let email = $(this).val();
         if (email.length > 0 && (email.match(/.+?\@.+/g) || []).length !== 1) {
-            Swal.fire({
-                position: 'top-end',
-                icon: 'warning',
-                title: 'Fill right email address!',
-                showConfirmButton: false,
-                timer: 3000
-            });
+            showValidateEmail();
         }
     });
 
@@ -110,32 +104,19 @@ $(function () {
         e.preventDefault();
         let nameInputCallback = document.getElementById('callback_name');
         let phoneInputCallback = document.getElementById('callback_phone');
-        let textCallback = encodeURI(`Name: ${nameInputCallback.value}, Phone: ${phoneInputCallback.value}`);
+        let textCallback = encodeURI(`Name: ${nameInputCallback.value};\nPhone: ${phoneInputCallback.value}`);
         if (nameInputCallback.value !== '' && phoneInputCallback.value !== '') {
             $.get(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=` + textCallback + 
             '&parse_mode=html', (json) => {
-                console.log(json);
                 if (json.ok) {
                     $("#my_callback-form").trigger('reset');
-                    Swal.fire({
-                        position: 'top-end',
-                        icon: 'success',
-                        title: 'Your message send!',
-                        showConfirmButton: false,
-                        timer: 3000
-                    });
+                    showSuccess();
                     // Закрытие формы callback после успешной отправки
                     $('.modal__callback').fadeOut(600);
                 }
             });
         } else {
-            Swal.fire({
-                position: 'top-end',
-                icon: 'warning',
-                title: 'Fill all field!',
-                showConfirmButton: false,
-                timer: 3000
-            });
+            showValidate();
         }
     });
 
@@ -178,15 +159,7 @@ $(function () {
                 $("#card_tour").slick('slickAdd', html);
             },
             error: function () {
-                // modal window sweet-aler2
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: "The tour-cards don't load!",
-                    showConfirmButton: false,
-                    timer: 4000
-                });
+                showError();
             }
         });
         // открыть по кнопке
@@ -240,34 +213,20 @@ $(function () {
         let emailInput = document.getElementById('booking_email');
         let phoneInput = document.getElementById('booking_phone');
         let tourSelect = document.getElementById('choice_tour');
-        let text = encodeURI(`Name: ${nameInput.value}, Surname:${surnameInput.value}, 
-        Email: ${emailInput.value}, Phone: ${phoneInput.value}, Tour: ${tourSelect.value}`);
- 
+        let text = encodeURI(`Name: ${nameInput.value};\nSurname: ${surnameInput.value};\nEmail: ${emailInput.value};\nPhone: ${phoneInput.value};\nTour: ${tourSelect.value}`);
         if (nameInput.value !== '' && surnameInput.value !== '' && emailInput.value !== '' &&
              phoneInput.value !== '' && tourSelect.value !== '') {
             $.get(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=` + text + 
              '&parse_mode=html', (json) => {
                 if (json.ok) {
                     $("#my_booking_form").trigger('reset');
-                    Swal.fire({
-                         position: 'top-end',
-                         icon: 'success',
-                         title: 'Your message send!',
-                         showConfirmButton: false,
-                         timer: 3000,
-                    });
+                    showSuccess();
                     // Закрытие формы order tour после успешной отправки
                     $('.booking__modal').fadeOut(600);
                 }
             });
         } else {
-             Swal.fire({
-                 position: 'top-end',
-                 icon: 'warning',
-                 title: 'Fill all field!',
-                 showConfirmButton: false,
-                 timer: 3000
-            });
+            showValidate();
         }
     });
 
@@ -306,15 +265,7 @@ $(function () {
                 $("#review_clients").append(html);
             },
             error: function () {
-                // modal window sweet-aler2
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: "The clients-cards don't load!",
-                    showConfirmButton: false,
-                    timer: 4000
-                });
+                showError();
             }
         });
     }
@@ -350,18 +301,56 @@ $(function () {
         });
         const marker = L.marker([24.9092452, 91.8641862], {
                 icon: myIcon
-            }).addTo(map)
-            .bindPopup(`
-        <div class="map_popup">
-        <img src="assets/plugins/leflet/images/map.svg" alt="map-pic">
-        <div class="map_info">
-            <b>Hello! <br>
-            My friend!</b>
-            <div class="map_info_text">You're in Flat 20, Housing state, Sylhet!</div>
+        }).addTo(map)
+        .bindPopup(`
+            <div class="map_popup">
+            <img src="assets/plugins/leflet/images/map.svg" alt="map-pic">
+            <div class="map_info">
+                <b>Hello! <br>
+                My friend!</b>
+                <div class="map_info_text">You're in Flat 20, Housing state, Sylhet!</div>
+                </div>
             </div>
-        </div>
         `);
     });
+
+    function showSuccess() {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Your message send!',
+          showConfirmButton: false,
+          timer: 4000,
+        });
+    }
+    function showValidate() {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'info',
+            title: 'Fill all field!',
+            showConfirmButton: false,
+            timer: 4000
+        });
+    }
+    function showValidateEmail() {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'info',
+            title: 'Fill right email address!',
+            showConfirmButton: false,
+            timer: 4000
+        });
+    }
+    function showError() {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: 'Server error!',
+            text: "Possible the cards don't load!",
+            showConfirmButton: false,
+            timer: 4000
+        });
+    }
 
     // Инициализация WOW.js при скроле for animate.css
     new WOW().init();
