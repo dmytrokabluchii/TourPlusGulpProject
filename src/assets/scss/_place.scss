@@ -78,8 +78,6 @@
             }
         }
         .card__link {
-            position: relative;
-            bottom: 0;
             button {
                 @include fz(16);
                 font-weight: 500;

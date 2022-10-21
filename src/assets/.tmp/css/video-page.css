@@ -763,10 +763,6 @@ input {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff 100%);
   pointer-events: none;
 }
-.place__card .card__link {
-  position: relative;
-  bottom: 0;
-}
 .place__card .card__link button {
   font-size: 1rem;
   font-weight: 500;
