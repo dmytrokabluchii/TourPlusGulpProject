@@ -7,11 +7,7 @@
 
 link to example: https://dmytrokabluchii.github.io/TourPlusGulpProject/
 
-link to example in real hosting: http://beetroot.zzz.com.ua/TourPlus_website_hosting/
-
-Multi page landing, responsive design.
-
-Selected content for the project.
+Multi page landing, responsive design. Selected content for the project.
 
 Technologies used: HTML, SCSS , Java Script, AJAX, JSON, Telegram bot, jQuery, Gulp.
 
